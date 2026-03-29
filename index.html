@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,40 +7,55 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="container">
+        <!-- heading
+        user
+        stats -->
         <h1>CODE RANK</h1>
         <div class="user-container">
-            <p>Enter Your LeetCode Username Below:</p>
+            <p>Enter your LeetCode username below:</p>
             <div class="user-input-container">
-                <input type="text" placeholder="Enter your username" id="user-input">
+                <input type="text" placeholder="Enter your username here" id="user-input">
                 <button id="search-btn">Search</button>
             </div>
         </div>
+
         <div class="stats-container">
+            
             <div class="progress">
-  <div class="ring-item">
-    <svg width="140" height="140" viewBox="0 0 140 140" class="ring-svg" data-level="easy"></svg>
-    <div class="ring-label easy-label">Easy</div>
-    <div class="ring-sub" id="easy-total">/ - total</div>
-  </div>
-  <div class="ring-item">
-    <svg width="140" height="140" viewBox="0 0 140 140" class="ring-svg" data-level="medium"></svg>
-    <div class="ring-label medium-label">Medium</div>
-    <div class="ring-sub" id="medium-total">/ - total</div>
-  </div>
-  <div class="ring-item">
-    <svg width="140" height="140" viewBox="0 0 140 140" class="ring-svg" data-level="hard"></svg>
-    <div class="ring-label hard-label">Hard</div>
-    <div class="ring-sub" id="hard-total">/ - total</div>
-  </div>
-</div>
-            <div class="stat-card">
-                <!-- Directly Populate card here from the JS Code -->
+
+                <div class="progress-item">
+                    <div class="easy-progress circle">
+                        <span id="easy-label"></span>
+                        <p>Easy</p>
+                    </div>
+                </div>
+
+                <div class="progress-item ">
+                    <div class="medium-progress circle">
+                        <span id="medium-label"></span>
+                        <p>Medium</p>
+                    </div>
+                </div>
+
+                <div class="progress-item ">
+                    <div class="hard-progress circle">
+                        <span id="hard-label"></span>
+                        <p>Hard</p>
+                    </div>
+                </div>
+
             </div>
+
+            <div class="stats-cards">
+                <!-- directly populate card here from the JS code -->
+            </div>
+
         </div>
+
     </div>
 
     <script src="script.js"></script>
-    <script src="city.js"></script>
 </body>
 </html>
