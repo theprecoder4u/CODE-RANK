@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-
     const searchButton = document.getElementById("search-btn");
     const usernameInput = document.getElementById("user-input");
     const statsContainer = document.querySelector(".stats-container");
@@ -77,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
         label.textContent = `${solved}/${total}`;
     }
 
-
     function displayUserData(parsedData) {
         statsContainer.classList.remove("hidden");
         const totalQues = parsedData.data.allQuestionsCount[0].count;
@@ -122,3 +120,4 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
 })
+
