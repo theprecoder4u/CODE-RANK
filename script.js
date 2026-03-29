@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         try{
             searchButton.textContent = "Searching...";
             searchButton.disabled = true;
-            //statsContainer.classList.add("hidden");
+            statsContainer.classList.add("hidden");
 
             // const response = await fetch(url);
             const proxyUrl = "https://cors-anywhere.herokuapp.com/";
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
             displayUserData(parsedData);
         }
         catch(error) {
-            statsContainer.innerHTML = `<p>${error.message}</p>`
+            statsContainer.innerHTML = `<p>${"Username Not Found, Please try again."}</p>`
         }
         finally {
             searchButton.textContent = "Search";
@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     function displayUserData(parsedData) {
+        statsContainer.classList.remove("hidden");
         const totalQues = parsedData.data.allQuestionsCount[0].count;
         const totalEasyQues = parsedData.data.allQuestionsCount[1].count;
         const totalMediumQues = parsedData.data.allQuestionsCount[2].count;
